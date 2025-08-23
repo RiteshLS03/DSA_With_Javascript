@@ -1,16 +1,17 @@
 var twoSum = function (nums, target) {
   let output = [];
-  let LowerValues = [];
-  for (let i = 0; i < nums.length; i++) {
-    if (nums[i] < target) {
-      LowerValues.push(nums[i]);
+  for (let i = 1; i < nums.length; i++) {
+    for (let j = 0; j < nums.length; j++) {
+      if (nums[i] + nums[j] == target) {
+        console.log(nums[i], nums[j], target);
+        output.push(nums[i]);
+        output.push(nums[j]);
+      }
     }
   }
-  console.log(LowerValues, output);
 
-  return output;
+  return output.slice(0, 2);
 };
-//   for()
 
 // [3, 2, 4]
 // 2 + 4 = 6
