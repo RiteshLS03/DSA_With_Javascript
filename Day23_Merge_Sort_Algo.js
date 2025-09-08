@@ -6,3 +6,5 @@ function mergeSort(arr) {
   let right = mergeSort(arr.slice(mid));
   return mergeSort(left, right);
 }
+
+console.log(mergeSort([465, 456, 31]));
