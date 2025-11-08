@@ -1,0 +1,19 @@
+const string = "Ritesh";
+
+function reverseTheString(string) {
+  const arr = [];
+
+  for (let i = 0; i < string.length; i++) {
+    arr.push(string[i]);
+  }
+
+  for (let j = 0; j < arr.length / 2; j++) {
+    let temp = arr[j];
+    arr[j] = arr[arr.length - (j + 1)];
+    arr[arr.length - (j + 1)] = temp;
+  }
+
+  return arr.join("");
+}
+
+console.log(reverseTheString(string));
