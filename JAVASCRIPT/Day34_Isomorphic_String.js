@@ -36,8 +36,27 @@
  * @return {boolean}
  */
 
+// let s = "egg",
+//   t = "add";
+
+// var isIsomorphic = function (s, t) {
+//   let hashMap = {};
+
+//   for (let i = 0; i < s.length; i++) {
+//     if (!hashMap.hasOwnProperty(s[i])) {
+//       hashMap[s[i]] = t[i];
+//     } else {
+//       if (hashMap[s[i]] != t[i]) hashMap[s[i]] = hashMap[s[i]];
+//       else {
+//         return false;
+//       }
+//     }
+//   }
+// };
+
+// console.log(isIsomorphic(s, t));
 let s = "egg",
-  t = "add";
+  t = "adb";
 
 var isIsomorphic = function (s, t) {
   let hashMap = {};
@@ -46,12 +65,15 @@ var isIsomorphic = function (s, t) {
     if (!hashMap.hasOwnProperty(s[i])) {
       hashMap[s[i]] = t[i];
     } else {
-      if (hashMap[s[i]] != t[i]) hashMap[s[i]] = hashMap[s[i]];
-      else {
+      if (hashMap[s[i]] != t[i]) {
         return false;
+      } else {
+        return true;
       }
     }
   }
+
+  return true;
 };
 
 console.log(isIsomorphic(s, t));
